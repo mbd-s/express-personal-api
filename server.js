@@ -55,6 +55,16 @@ app.get('/api', function api_index(req, res) {
   });
 });
 
+//get profile
+app.get('/api/profile', function (req, res) {
+  db.Profile.find(function(err, profile) {
+    if (err) {
+      return console.log("index error: " + err);
+    }
+    res.json(profile);
+  });
+});
+
 /**********
  * SERVER *
  **********/

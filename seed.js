@@ -24,21 +24,30 @@ var new_profile = {
 //   artist: "Cluster",
 //   album: "Cluster & Eno",
 //   release_year: 1977,
-//   genres: ["Ambient", "Electronic", "Krautrock"]
+//   genres: [
+//     "Ambient",
+//     "Electronic",
+//     "Krautrock"
+//     ]
 //   },
 //   {
 //   song_title: "Mit Simaen",
 //   artist: "Cluster",
 //   album: "The Expanding Universe",
 //   release_year: 1977,
-//   genres: ["Electronic", "Ambient"]
+//   genres: [
+//     "Electronic",
+//     "Ambient"
+//     ]
 //   },
 //   {
 //   song_title: "Bach: Goldberg Variations, BWV 988",
 //   artist: "Glenn Gould",
 //   album: "Bach: The Goldberg Variations",
 //   release_year: 1981,
-//   genres: ["Classical"]
+//   genres: [
+//     "Classical"
+//     ]
 //   },
 // ];
 
