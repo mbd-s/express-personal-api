@@ -10,8 +10,8 @@ $.ajax({
 });
 
 function onSuccess(json){
-  $('#profileDisplay').append('<div><ul><li>' + json[0].name + '</li><li>' +
-  '<a href="' + json[0].github_link + '">Github</a></li></ul></div>');
+  $('#profileDisplay').append('<ul><li>' + json[0].name + '</li><li>' +
+  '<a href="' + json[0].github_link + '">Github</a></li></ul>');
 }
 
 function onError(e) {
