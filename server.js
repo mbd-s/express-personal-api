@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
  * DATABASE *
  ************/
 
-// var db = require('./models');
+var db = require('./models');
 
 /**********
  * ROUTES *
@@ -49,7 +49,8 @@ app.get('/api', function api_index(req, res) {
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
       {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      {method: "POST", path: "/api/songs", description: "Suggest a new song"} // CHANGE ME
+      {method: "GET", path: "/api/songs", description: "Return a list of all songs"},
+      {method: "POST", path: "/api/songs", description: "Suggests a new song"}
     ]
   });
 });

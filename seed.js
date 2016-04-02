@@ -18,6 +18,30 @@ var new_profile = {
   ]
 };
 
+// var song_list = [
+//   {
+//   song_title: "Mit Simaen",
+//   artist: "Cluster",
+//   album: "Cluster & Eno",
+//   release_year: 1977,
+//   genres: ["Ambient", "Electronic", "Krautrock"]
+//   },
+//   {
+//   song_title: "Mit Simaen",
+//   artist: "Cluster",
+//   album: "The Expanding Universe",
+//   release_year: 1977,
+//   genres: ["Electronic", "Ambient"]
+//   },
+//   {
+//   song_title: "Bach: Goldberg Variations, BWV 988",
+//   artist: "Glenn Gould",
+//   album: "Bach: The Goldberg Variations",
+//   release_year: 1981,
+//   genres: ["Classical"]
+//   },
+// ];
+
 db.Profile.create(new_profile, function(err, profile){
   if (err){
     return console.log("Error:", err);
