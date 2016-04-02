@@ -9,8 +9,13 @@ var new_profile = {
   github_profile_image: "https://avatars0.githubusercontent.com/u/13588399",
   current_city: "Berlin",
   pets: [
-    {name: "Moku", type: "cat", color: "black"},
-    {name: "Frances", type: "cat", color: "grey"}]
+    {
+      name: "Moku", type: "cat", color: "black"
+    },
+    {
+      name: "Frances", type: "cat", color: "grey"
+    }
+  ]
 };
 
 db.Profile.create(new_profile, function(err, profile){

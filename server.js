@@ -44,12 +44,12 @@ app.get('/api', function api_index(req, res) {
   // TODO: Document all your api endpoints below
   res.json({
     message: "Welcome to my personal api! Here's what you need to know!",
-    documentation_url: "https://github.com/mbd-s/express_self_api/README.md", // CHANGE ME
-    base_url: "http://apricot-cobbler-79321.herokuapp.com", // CHANGE ME
+    documentation_url: "https://github.com/mbd-s/express_self_api/",
+    base_url: "http://apricot-cobbler-79321.herokuapp.com",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
       {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
+      {method: "POST", path: "/api/songs", description: "Suggest a new song"} // CHANGE ME
     ]
   });
 });
@@ -58,7 +58,6 @@ app.get('/api', function api_index(req, res) {
  * SERVER *
  **********/
 
-// listen on port 3000
 app.listen(process.env.PORT || 3000, function () {
   console.log('Express server is up and running on http://localhost:3000/');
 });
