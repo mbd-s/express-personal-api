@@ -1,22 +1,35 @@
 console.log("Sanity Check: JS is working!");
+var template;
+var allSongs = [];
 
 $(document).ready(function(){
 
-// $.ajax({
-//   method: 'GET',
-//   url: '/api/profile',
-//   success: onSuccess,
-//   error: onError
-// });
-//
-// function onSuccess(json){
-//   $('#profileDisplay').append('<ul><li>' + json[0].name + '</li><li>' +
-//   '<a href="' + json[0].github_link + '">Github</a>' + '</li></ul>');
-// }
-//
-// function onError(e) {
-//   console.log('uh oh');
-//   $('#profileDisplay').append('Failed to load profile.');
-// }
+  $songsList = $('#songsTarget');
+
+  var source = $('#songs-template').html();
+  template = Handlebars.compile(source);
+
+  $.ajax({
+    method: 'GET',
+    url: '/api/songs',
+    success: onSuccess,
+    error: onError
+  });
 
 });
+
+function render () {
+  $songsList.empty();
+  var songsHtml = template({ songs: allSongs });
+  $songsList.append(songsHtml);
+}
+
+function onSuccess(json){
+  allSongs = json;
+  render();
+}
+
+function onError(e) {
+  console.log('uh oh');
+  $('#songsTarget').append('Failed to load songs.');
+}

@@ -55,13 +55,23 @@ app.get('/api', function(req, res) {
   });
 });
 
-//get profile
+// get profile
 app.get('/api/profile', function (req, res) {
   db.Profile.find(function(err, profile) {
     if (err) {
       return console.log("index error: " + err);
     }
     res.json(profile);
+  });
+});
+
+// get all songs
+app.get('/api/songs', function (req, res){
+  db.Songs.find(function(err, songs){
+    if (err){
+      return console.log("index error: " + err);
+    }
+    res.json(songs);
   });
 });
 

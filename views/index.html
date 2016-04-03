@@ -17,16 +17,33 @@
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
   </head>
+
   <body>
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h1>Music for Coding</h1>
-          <div id="profileDisplay">
-            <!-- <script id="profile-template" type="text/x-handlebars-template">
-            </script> -->
+          <div id="songsTarget"><p>
+          </p>
+            <script id="songs-template" type="text/x-handlebars-template">
+              {{#each songs}}
+              <hr>
+              <p>
+                <b>"{{title}}"</b>
+                by {{artist}}
+                <br>
+                <em>{{album}}</em>, {{release_year}}
+                <br>
+                  <b>Genre(s):</b>
+                  {{#each genre}} {{this}} 
+
+                  {{/each}}
+              {{/each}}
+              </p>
+            </script>
           </div>
-          <h4><a href="/api">Read My API Documentation</a></h4>
+          <hr>
+          <h4><a href="/api">Read my API documentation</a></h4>
         </div>
       </div>
     </div>

@@ -2,11 +2,11 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var SongSchema = new Schema({
-  song_title: String,
+  title: String,
   artist: String,
   album: String,
   release_year: Number,
-  genres: Array,
+  genre: Array,
 });
 
 var Songs = mongoose.model('Songs', SongSchema);
