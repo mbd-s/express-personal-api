@@ -7,6 +7,7 @@ var SongSchema = new Schema({
   album: String,
   release_year: Number,
   genre: Array,
+  link: String
 });
 
 var Songs = mongoose.model('Songs', SongSchema);

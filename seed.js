@@ -7,10 +7,14 @@ var new_profile = {
   current_city: "Berlin",
   pets: [
     {
-      name: "Moku", type: "cat", color: "black"
+      name: "Moku",
+      type: "cat",
+      color: "black"
     },
     {
-      name: "Frances", type: "cat", color: "grey"
+      name: "Frances",
+      type: "cat",
+      color: "grey"
     }
   ]
 };
@@ -25,7 +29,8 @@ var song_list = [
     "Ambient",
     "Electronic",
     "Krautrock"
-    ]
+    ],
+  link: "https://www.youtube.com/embed/JtnykF4ABMI"
   },
   {
   title: "The Expanding Universe",
@@ -35,7 +40,8 @@ var song_list = [
   genre: [
     "Electronic",
     "Ambient"
-    ]
+    ],
+  link: "https://www.youtube.com/embed/dYUZmsfm4Ww"
   },
   {
   title: "Bach: Goldberg Variations, BWV 988",
@@ -44,16 +50,18 @@ var song_list = [
   release_year: 1981,
   genre: [
     "Classical"
-    ]
+    ],
+  link: "https://www.youtube.com/embed/zpsfhTxo5yw"
   },
   {
-  title: "Hallo Gallo",
+  title: "Hallogallo",
   artist: "Neu!",
   album: "Neu!",
   release_year: 1972,
   genre: [
     "Krautrock"
-    ]
+  ],
+  link: "https://www.youtube.com/embed/EAXYMOgHQI4"
   },
   {
   title: "Spheres",
@@ -62,7 +70,19 @@ var song_list = [
   release_year: 1977,
   genre: [
     "Electronic"
-    ]
+    ],
+    link: "https://www.youtube.com/embed/Ke0AVIuf6Mo"
+  },
+  {
+  title: "Franz Schubert",
+  artist: "Kraftwerk",
+  album: "Trans-Europe Express",
+  release_year: 1977,
+  genre: [
+    "Krautrock",
+    "Electronic"
+    ],
+    link: "https://www.youtube.com/embed/tJqnc_0mZmA"
   }
 ];
 

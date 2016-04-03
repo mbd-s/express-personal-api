@@ -50,7 +50,7 @@ app.get('/api', function(req, res) {
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
       {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
       {method: "GET", path: "/api/songs", description: "Return a list of all songs"},
-      {method: "POST", path: "/api/songs", description: "Suggests a new song"}
+      {method: "POST", path: "/api/songs", description: "Suggest a new song"}
     ]
   });
 });
@@ -72,6 +72,24 @@ app.get('/api/songs', function (req, res){
       return console.log("index error: " + err);
     }
     res.json(songs);
+  });
+});
+
+// create a new song
+app.post('/api/songs', function(req, res){
+  var newSong = new db.Songs({
+    title: req.body.title,
+    artist: req.body.artist,
+    genre: req.body.genre,
+    link: req.body.link,
+  });
+
+  newSong.save(function(err, song){
+        if (err) {
+          console.log("Save error: " + err);
+        }
+        console.log("Saved ", song.title);
+        res.json(song);
   });
 });
 
