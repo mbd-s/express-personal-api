@@ -94,10 +94,8 @@ app.post('/api/songs', function(req, res){
 
 // delete a song
 app.delete('/api/songs/:id', function (req, res) {
-  // get book id from url params (`req.params`)
   console.log('Deleting song', req.params);
   var songId = req.params.id;
-  // find the index of the book we want to remove
   db.Songs.findOneAndRemove({ _id: songId }, function (err, deletedSong) {
     res.json(deletedSong);
   });

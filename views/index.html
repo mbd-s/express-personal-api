@@ -19,56 +19,55 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div>
-          <h1>Songs To Code To</h1>
-          <div>
-            <form class="form-inline" id="newSongForm">
-              <div class="form-group">
-                <input type="text" class="form-control" name="title" placeholder="Song title">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="artist" placeholder="Artist">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="genre" placeholder="Genre">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="link" placeholder="YouTube embed link">
-              </div>
-              <button type="submit" class="btn btn-default">Add a song</button>
-            </form>
-            <br>
-            <hr>
+    <div class="container-fluid">
+      <h3 class="text-center">Songs To Code To</h3>
+      <div id="profileTarget"></div>
+      <br>
+      <h4><a href="/api">Read my API documentation</a></h4>
+      <br>
+      <div class="formDiv col-sm-12">
+        <form class="form-inline" id="newSongForm">
+          <div class="form-group">
+            <input type="text" class="form-control" name="title" placeholder="Song title">
           </div>
-          <div id="songsTarget" class="col-med-3 col-sm-offset-1">
-            <script id="songs-template" type="text/x-handlebars-template">
-              {{#each songs}}
-                <div class="songEntry">
-                  <p>
-                    <b>"{{title}}"</b>
-                    by {{artist}}
-                    <br>
-                      <b>Genre(s):</b>
-                      {{#each genre}}
-                      {{this}}{{#unless @last}},{{/unless}}
-                      {{/each}}
-                    <br>
-                    <br>
-                    <iframe width="200" height="200" src="{{link}}" frameborder="0"></iframe>
-                    <br>
-                    <button type="button" name="button" class="deleteBtn btn btn-danger" data-id={{_id}}>Delete</button>
-                  </div>
-                {{/each}}
-                </p>
-            </script>
-            <!--- <a href="{{link}}" target="_blank">Listen</a> -->
+          <div class="form-group">
+            <input type="text" class="form-control" name="artist" placeholder="Artist">
           </div>
-          <hr>
-          <h4><a href="/api">Read my API documentation</a></h4>
-        </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="genre" placeholder="Genre">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="link" placeholder="YouTube embed link">
+          </div>
+          <button type="submit" class="btn btn-primary">Add a song</button>
+        </form>
+        <br>
+        <hr>
       </div>
+      <div id="songsTarget" class="col-sm-5 col-sm-offset-1">
+        <script id="songs-template" type="text/x-handlebars-template">
+          {{#each songs}}
+            <div class="songEntry">
+              <p>
+                <b>"{{title}}"</b>
+                by {{artist}}
+                <br>
+                  <b>Genre(s):</b>
+                  {{#each genre}}
+                  {{this}}{{#unless @last}},{{/unless}}
+                  {{/each}}
+                <br>
+                <br>
+                <iframe width="200" height="200" src="{{link}}" frameborder="0"></iframe>
+                <br>
+                <button type="button" name="button" class="deleteBtn btn btn-danger" data-id={{_id}}>Delete</button>
+              </div>
+            {{/each}}
+            </p>
+        </script>
+        <!--- <a href="{{link}}" target="_blank">Listen</a> -->
+      </div>
+      <hr>
     </div>
   </body>
 </html>

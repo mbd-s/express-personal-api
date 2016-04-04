@@ -11,6 +11,13 @@ $(document).ready(function(){
 
   $.ajax({
     method: 'GET',
+    url: 'api/profile',
+    success: renderProfile,
+    error: renderProfileError
+  });
+
+  $.ajax({
+    method: 'GET',
     url: '/api/songs',
     success: onSuccess,
     error: onError
@@ -39,6 +46,15 @@ $(document).ready(function(){
   });
 
 });
+
+function renderProfile(json){
+  $('#profileTarget').append('<img src="' + json[0].github_profile_image + '" alt="GitHub profile image">');
+  console.log(json[0].github_profile_image);
+}
+
+function renderProfileError(e){
+  console.log("Error loading profile image.");
+}
 
 function render () {
   $songsList.empty();
