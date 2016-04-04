@@ -43,7 +43,7 @@ app.get('/', function homepage(req, res) {
 app.get('/api', function(req, res) {
   res.json({
     message: "Welcome to my personal api! Here's what you need to know!",
-    documentation_url: "https://github.com/mbd-s/express_self_api/",
+    documentation_url: "https://github.com/mbd-s/express-personal-api/",
     base_url: "http://apricot-cobbler-79321.herokuapp.com",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
