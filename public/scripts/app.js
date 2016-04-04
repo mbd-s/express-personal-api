@@ -59,7 +59,7 @@ function renderProfileError(e){
 function render () {
   $songsList.empty();
   var songsHtml = template({ songs: allSongs });
-  $songsList.prepend(songsHtml);
+  $songsList.append(songsHtml);
 }
 
 function onSuccess(json){
