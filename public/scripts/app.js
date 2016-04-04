@@ -59,7 +59,7 @@ function renderProfileError(e){
 function render () {
   $songsList.empty();
   var songsHtml = template({ songs: allSongs });
-  $songsList.append(songsHtml);
+  $songsList.prepend(songsHtml);
 }
 
 function onSuccess(json){
@@ -69,7 +69,7 @@ function onSuccess(json){
 
 function onError(e) {
   console.log('uh oh');
-  $('#songsTarget').append('Failed to load songs.');
+  $songsList.append('Failed to load songs.');
 }
 
 function newSongSuccess(json) {
