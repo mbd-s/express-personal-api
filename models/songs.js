@@ -5,7 +5,6 @@ var SongSchema = new Schema({
   title: String,
   artist: String,
   album: String,
-  release_year: Number,
   genre: Array,
   link: String
 });

@@ -24,7 +24,6 @@ var song_list = [
   title: "Mit Simaen",
   artist: "Cluster",
   album: "Cluster & Eno",
-  release_year: 1977,
   genre: [
     "Ambient",
     "Electronic",
@@ -36,7 +35,6 @@ var song_list = [
   title: "The Expanding Universe",
   artist: "Laurie Spiegel",
   album: "The Expanding Universe",
-  release_year: 1980,
   genre: [
     "Electronic",
     "Ambient"
@@ -47,7 +45,6 @@ var song_list = [
   title: "Bach: Goldberg Variations, BWV 988",
   artist: "Glenn Gould",
   album: "Bach: The Goldberg Variations",
-  release_year: 1981,
   genre: [
     "Classical"
     ],
@@ -57,7 +54,6 @@ var song_list = [
   title: "Hallogallo",
   artist: "Neu!",
   album: "Neu!",
-  release_year: 1972,
   genre: [
     "Krautrock"
   ],
@@ -67,7 +63,6 @@ var song_list = [
   title: "Spheres",
   artist: "Gianni Safred & His Electronic Instruments",
   album: "Electronic Designs",
-  release_year: 1977,
   genre: [
     "Electronic"
     ],
@@ -77,12 +72,31 @@ var song_list = [
   title: "Franz Schubert",
   artist: "Kraftwerk",
   album: "Trans-Europe Express",
-  release_year: 1977,
   genre: [
     "Krautrock",
     "Electronic"
     ],
     link: "https://www.youtube.com/embed/tJqnc_0mZmA"
+  },
+  {
+  title: "Hear, O Lord",
+  artist: "Goretti Group",
+  album: "Sing Out My Soul",
+  genre: [
+    "Gospel",
+    "Caribbean"
+    ],
+    link: "https://www.youtube.com/embed/EhmC_3sGgNc"
+  },
+  {
+  title: "Tana's Theme",
+  artist: "Ray Sherman",
+  album: "Touch of Evil Soundtrack",
+  genre: [
+    "Mariachi Noir",
+    "Player Piano"
+    ],
+    link: "https://www.youtube.com/embed/OnBAmytGtQ4"
   }
 ];
 

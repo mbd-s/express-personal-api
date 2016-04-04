@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Music for Coding</title>
+    <title>Songs To Code To</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
     <div class="container">
       <div class="row">
         <div>
-          <h1>Music for Coding</h1>
+          <h1>Songs To Code To</h1>
           <div>
             <form class="form-inline" id="newSongForm">
               <div class="form-group">
@@ -32,7 +32,7 @@
                 <input type="text" class="form-control" name="artist" placeholder="Artist">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="genre" placeholder="Genre(s)">
+                <input type="text" class="form-control" name="genre" placeholder="Genre">
               </div>
               <div class="form-group">
                 <input type="text" class="form-control" name="link" placeholder="YouTube embed link">
@@ -42,7 +42,7 @@
             <br>
             <hr>
           </div>
-          <div id="songsTarget">
+          <div id="songsTarget" class="col-med-3 col-sm-offset-1">
             <script id="songs-template" type="text/x-handlebars-template">
               {{#each songs}}
                 <div class="songEntry">
@@ -55,7 +55,10 @@
                       {{this}}{{#unless @last}},{{/unless}}
                       {{/each}}
                     <br>
-                    <iframe src="{{link}}" frameborder="0"></iframe>
+                    <br>
+                    <iframe width="200" height="200" src="{{link}}" frameborder="0"></iframe>
+                    <br>
+                    <button type="button" name="button" class="deleteBtn btn btn-danger" data-id={{_id}}>Delete</button>
                   </div>
                 {{/each}}
                 </p>

@@ -28,6 +28,16 @@ $(document).ready(function(){
     });
   });
 
+  $songsList.on('click', '.deleteBtn', function() {
+    console.log('Clicked delete button to', '/api/songs/'+$(this).attr('data-id'));
+    $.ajax({
+      method: 'DELETE',
+      url: '/api/songs/'+$(this).attr('data-id'),
+      success: deleteSongSuccess,
+      error: deleteSongError
+    });
+  });
+
 });
 
 function render () {
@@ -54,4 +64,22 @@ function newSongSuccess(json) {
 
 function newSongError() {
   console.log('New song error!');
+}
+
+function deleteSongSuccess(json) {
+  var song = json;
+  console.log(json);
+  var songId = song._id;
+  console.log('Deleting song', songId);
+  for (var index = 0; index < allSongs.length; index++) {
+    if(allSongs[index]._id === songId) {
+      allSongs.splice(index, 1);
+      break;
+    }
+  }
+  render();
+}
+
+function deleteSongError() {
+  console.log('Error deleting the song!');
 }

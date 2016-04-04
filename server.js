@@ -41,16 +41,16 @@ app.get('/', function homepage(req, res) {
  */
 
 app.get('/api', function(req, res) {
-  // TODO: Document all your api endpoints below
   res.json({
     message: "Welcome to my personal api! Here's what you need to know!",
     documentation_url: "https://github.com/mbd-s/express_self_api/",
     base_url: "http://apricot-cobbler-79321.herokuapp.com",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      {method: "GET", path: "/api/songs", description: "Return a list of all songs"},
-      {method: "POST", path: "/api/songs", description: "Suggest a new song"}
+      {method: "GET", path: "/api/profile", description: "Data about me"},
+      {method: "GET", path: "/api/songs", description: "Returns a list of all songs"},
+      {method: "POST", path: "/api/songs", description: "Adds a new song"},
+      {method: "DELETE", path: "api/songs/:id", description: "Deletes a song"}
     ]
   });
 });
@@ -83,13 +83,23 @@ app.post('/api/songs', function(req, res){
     genre: req.body.genre,
     link: req.body.link,
   });
-
   newSong.save(function(err, song){
         if (err) {
           console.log("Save error: " + err);
         }
         console.log("Saved ", song.title);
         res.json(song);
+  });
+});
+
+// delete a song
+app.delete('/api/songs/:id', function (req, res) {
+  // get book id from url params (`req.params`)
+  console.log('Deleting song', req.params);
+  var songId = req.params.id;
+  // find the index of the book we want to remove
+  db.Songs.findOneAndRemove({ _id: songId }, function (err, deletedSong) {
+    res.json(deletedSong);
   });
 });
 

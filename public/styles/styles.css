@@ -9,7 +9,7 @@ h1 {
   text-align: center
 }
 .songEntry {
-  /*border: black dashed 2px;*/
+  border: black dashed 2px;
   margin: 25px;
   padding: 20px
 }
