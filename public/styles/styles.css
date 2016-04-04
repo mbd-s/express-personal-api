@@ -1,30 +1,28 @@
 body {
-  color: #0c090a;
   font-family: Helvetica, Arial, sans-serif;
+  color: blue;
   background-color: white
-}
-h2 {
-  margin: 20px;
-  padding: 10px;
-  text-align: center;
-
 }
 #profileTarget {
   position: absolute;
   top: 5px;
   left: 5px
 }
-.formDiv {
-  border: blue dashed 2px
-  padding: 10px;
-}
 .songEntry {
-  border: black dashed 2px;
-  margin: 25px;
-  padding: 10px
-}
+  border: blue dashed 2px;
 
+  margin: 25px;
+  padding: 15px;
+
+}
 img {
   width: 75px;
-  height: 75px;
+  height: 75px
+}
+a, a:visited {
+  color: blue
+}
+.btn-primary-outline {
+  background: blue;
+    color: white
 }

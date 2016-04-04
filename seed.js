@@ -73,13 +73,12 @@ var song_list = [
     link: "https://www.youtube.com/embed/tJqnc_0mZmA"
   },
   {
-  title: "Hear, O Lord",
+  title: "Sing Out My Soul",
   artist: "Goretti Group",
   genre: [
-    "Gospel",
-    "Caribbean"
+    "Trinadadian Gospel"
     ],
-    link: "https://www.youtube.com/embed/EhmC_3sGgNc"
+    link: "https://www.youtube.com/embed/MXVVT0eyzFo"
   },
   {
   title: "Tana's Theme",
@@ -89,7 +88,41 @@ var song_list = [
     "Player Piano"
     ],
     link: "https://www.youtube.com/embed/OnBAmytGtQ4"
+  },
+  {
+  title: "Ode til Heimaey",
+  artist: "Sume",
+  genre: [
+    "Greenlandic psych rock"
+    ],
+    link: "https://www.youtube.com/embed/LQjohBMmVhI"
+  },
+  {
+  title: "In the Summer",
+  artist: "Terry Riley",
+  genre: [
+    "Classical",
+    "Minimalist"
+    ],
+    link: "https://www.youtube.com/embed/tFYjbwrN9DU"
+  },
+  {
+  title: "a2 (Max Cooper remix)",
+  artist: "Olafur Arnalds & Nils Frahm",
+  genre: [
+    "Electronic"
+    ],
+    link: "https://www.youtube.com/embed/dfKOUrTqvlA"
+  },
+  {
+  title: "Schumann: Kinderszenen, Op. 15",
+  artist: "Martha Argerich",
+  genre: [
+    "Classical"
+    ],
+    link: "https://www.youtube.com/embed/NdqBfMb3pX0"
   }
+
 ];
 
 db.Profile.remove({}, function(err, profile){
