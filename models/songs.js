@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
 var SongSchema = new Schema({
   title: String,
   artist: String,
-  genre: Array,
+  genre: Array, // [String]
   link: String
 });
 
