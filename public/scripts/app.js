@@ -1,4 +1,3 @@
-console.log("Sanity Check: JS is working!");
 var template;
 var allSongs = [];
 
@@ -8,13 +7,6 @@ $(document).ready(function(){
 
   var source = $('#songs-template').html();
   template = Handlebars.compile(source);
-
-  $.ajax({
-    method: 'GET',
-    url: 'api/profile',
-    success: renderProfile,
-    error: renderProfileError
-  });
 
   $.ajax({
     method: 'GET',
@@ -46,15 +38,6 @@ $(document).ready(function(){
   });
 
 });
-
-function renderProfile(json){
-  $('#profileTarget').append('<img src="' + json[0].github_profile_image + '" alt="GitHub profile image">');
-  console.log(json[0].github_profile_image);
-}
-
-function renderProfileError(e){
-  console.log("Error loading profile image.");
-}
 
 function render () {
   $songsList.empty();
